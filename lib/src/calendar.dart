@@ -150,6 +150,21 @@ class _VerticalCalendarState extends State<SimpleVerticalCalendar> {
           return Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              TableRow(
+                decoration: BoxDecoration(
+                  border: Border(
+                    bottom: BorderSide(color: Colors.black),
+                  ),
+                ),
+                children: [
+                  for (var i in widget.dayOfWeek)
+                    DayOfWeekWidget(
+                      i,
+                      dayOfWeekStyle: widget.dayOfWeekHeaderStyle,
+                    ),
+                ],
+              ),
+              SizedBox(height: 10),
               HeaderWidget(
                 currentListMonth,
                 headerStyle: widget.headerStyle,
@@ -157,20 +172,7 @@ class _VerticalCalendarState extends State<SimpleVerticalCalendar> {
               SizedBox(height: 10),
               Table(
                 children: [
-                  TableRow(
-                    decoration: BoxDecoration(
-                      border: Border(
-                        bottom: BorderSide(color: Colors.black),
-                      ),
-                    ),
-                    children: [
-                      for (var i in widget.dayOfWeek)
-                        DayOfWeekWidget(
-                          i,
-                          dayOfWeekStyle: widget.dayOfWeekHeaderStyle,
-                        ),
-                    ],
-                  ),
+
                   for (var d = 0; d <= days.length ~/ 7; d++)
                     if (d * 7 < days.length)
                       TableRow(
@@ -251,6 +253,7 @@ class _VerticalCalendarState extends State<SimpleVerticalCalendar> {
                                               "",
                                       textAlign: TextAlign.center,
                                       style: TextStyle(
+                                        fontWeight:FontWeight.w500
                                         fontSize: 13,
                                         color: checkInvalidDate(d * 7 + w, days,
                                                 current: current)
