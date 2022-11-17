@@ -150,20 +150,24 @@ class _VerticalCalendarState extends State<SimpleVerticalCalendar> {
           return Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              TableRow(
-                decoration: BoxDecoration(
-                  border: Border(
-                    bottom: BorderSide(color: Colors.black),
-                  ),
-                ),
+              Table(
                 children: [
-                  for (var i in widget.dayOfWeek)
-                    DayOfWeekWidget(
-                      i,
-                      dayOfWeekStyle: widget.dayOfWeekHeaderStyle,
+                  TableRow(
+                    decoration: BoxDecoration(
+                      border: Border(
+                        bottom: BorderSide(color: Colors.black),
+                      ),
                     ),
-                ],
-              ),
+                    children: [
+                      for (var i in widget.dayOfWeek)
+                        DayOfWeekWidget(
+                          i,
+                          dayOfWeekStyle: widget.dayOfWeekHeaderStyle,
+                        ),
+                    ],
+                  ),
+                ]
+              )
               SizedBox(height: 10),
               HeaderWidget(
                 currentListMonth,
