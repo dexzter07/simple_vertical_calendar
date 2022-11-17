@@ -155,7 +155,7 @@ class _VerticalCalendarState extends State<SimpleVerticalCalendar> {
                   TableRow(
                     decoration: BoxDecoration(
                       border: Border(
-                        bottom: BorderSide(color: Colors.black),
+                        bottom: BorderSide(color: Colors.grey.shade400),
                       ),
                     ),
                     children: [
@@ -168,7 +168,7 @@ class _VerticalCalendarState extends State<SimpleVerticalCalendar> {
                   ),
                 ]
               ),
-              SizedBox(height: 10),
+              SizedBox(height: 20),
               HeaderWidget(
                 currentListMonth,
                 headerStyle: widget.headerStyle,
