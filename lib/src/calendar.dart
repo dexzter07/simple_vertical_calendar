@@ -141,7 +141,6 @@ class _VerticalCalendarState extends State<SimpleVerticalCalendar> {
   Widget build(BuildContext context) {
     boxHeight = (MediaQuery.of(context).size.width - 70) / 7;
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 35),
       child: ListView.builder(
         itemCount: widget.numOfMonth,
         itemBuilder: (context, index) {
