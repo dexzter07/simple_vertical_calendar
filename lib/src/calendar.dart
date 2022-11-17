@@ -167,7 +167,7 @@ class _VerticalCalendarState extends State<SimpleVerticalCalendar> {
                     ],
                   ),
                 ]
-              )
+              ),
               SizedBox(height: 10),
               HeaderWidget(
                 currentListMonth,
@@ -257,7 +257,7 @@ class _VerticalCalendarState extends State<SimpleVerticalCalendar> {
                                               "",
                                       textAlign: TextAlign.center,
                                       style: TextStyle(
-                                        fontWeight:FontWeight.w500
+                                        fontWeight:FontWeight.w500,
                                         fontSize: 13,
                                         color: checkInvalidDate(d * 7 + w, days,
                                                 current: current)
