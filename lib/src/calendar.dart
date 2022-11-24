@@ -102,7 +102,7 @@ class _VerticalCalendarState extends State<SimpleVerticalCalendar> {
   });
   @override
   void initState() {
-    current = DateTime(now.year, now.month, now.day - 1);
+    current = DateTime(now.year, now.month, now.day);
     startMonth = current!.month;
     endMonth = startMonth! + widget.numOfMonth;
     startDate = widget.startDate;
