@@ -86,6 +86,7 @@ class SimpleVerticalCalendar extends StatefulWidget {
 }
 
 class _VerticalCalendarState extends State<SimpleVerticalCalendar> {
+  final now = DateTime.now();
   DateTime? current;
   int? startMonth;
   int? endMonth;
@@ -101,7 +102,7 @@ class _VerticalCalendarState extends State<SimpleVerticalCalendar> {
   });
   @override
   void initState() {
-    current = DateTime.now();
+    current = DateTime(now.year, now.month, now.day - 1);
     startMonth = current!.month;
     endMonth = startMonth! + widget.numOfMonth;
     startDate = widget.startDate;
